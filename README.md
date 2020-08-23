@@ -1,4 +1,4 @@
-# Deep-Learning-based-skin-cancer-classification
+# Deep Learning Based Skin Cancer Classification
 
 # 0.	Background and Data pre-processing
 Early detection of skin lesions can help in its treatment and improve life. Most melanomas are ﬁrst identiﬁed visually, but unaided visual inspection only has a diagnostic accuracy of roughly 60%. Recently, medical professionals have used dermoscopy, a new technology of visual inspection, that both magniﬁes the skin and eliminates surface reﬂection.
@@ -15,9 +15,9 @@ More details could be found in https://challenge2018.isic-archive.com/
 
 This code uses: Python 3.5, Keras 2.1.6, TensorFlwo 1.8.0. All other requirements are written in requirements.txt
 
-Note: We use the development version of scikit-image for image resizing as it supports anti-aliasing. You can install development version directly from Github. Alternatively, you could change the resize function in load_image_by_id in datasets/ISIC2018/__init__.py to not use the anti-aliasing flag.
+**Note**: We use the development version of scikit-image for image resizing as it supports anti-aliasing. You can install development version directly from Github. Alternatively, you could change the resize function in load_image_by_id in datasets/ISIC2018/__init__.py to not use the anti-aliasing flag.
 
-Note: Root directory can be edited in runs/paths.py: type in your own root directory path. Mine is '/OSM/CBR/D61_MLBSCD/results/David2'
+**Note**: Root directory can be edited in runs/paths.py: type in your own root directory path. Mine is '/OSM/CBR/D61_MLBSCD/results/David2'
 
 # 0.2 Data preparation
 
@@ -85,11 +85,11 @@ Pre-processing for 2590 images takes around 20 minutes:
 Where denseNet169 is the model backbone’s name, k0 is the 1st folder, v0 is the 1st
 version
 
-Note: We are using the k-fold cross validation method. See: https://medium.com/datadriveninvestor/k-fold-cross-validation-6b8518070833 for more detail. Set the variable: num_folds in ‘seg_train.py’ to 5 if you want to do 5 fold training. Set it to 1 if you want to use a single fold.
+**Note**: We are using the k-fold cross validation method. See: https://medium.com/datadriveninvestor/k-fold-cross-validation-6b8518070833 for more detail. Set the variable: num_folds in ‘seg_train.py’ to 5 if you want to do 5 fold training. Set it to 1 if you want to use a single fold.
 
-Note: after pre-processing, images data will be saved in data/cache as ‘.npy’
+**Note**: after pre-processing, images data will be saved in data/cache as ‘.npy’
 
-Note: Effect of Batch Normalization: https://towardsdatascience.com/batch-normalization-and-dropout-in-neural-networks-explained-with-pytorch-47d7a8459bcd
+**Note**: Effect of Batch Normalization: https://towardsdatascience.com/batch-normalization-and-dropout-in-neural-networks-explained-with-pytorch-47d7a8459bcd
 
 # 1.2 Segmentation Evaluation:
 
@@ -155,9 +155,9 @@ Note:  To visualize the mask or save the mask to a new folder, you have to chang
 •	The training performance of the model after each epoch will be saved in ‘model_data’ directory as a .csv file. The weights will be saved in the same directory too.
 
 
-Note: As the training data set has imbalanced samples among classes. We have used some techniques to handle this imbalanced dataset, such as balanced weight, focal loss and dropout. See: https://towardsdatascience.com/handling-imbalanced-datasets-in-deep-learning-f48407a0e758
+**Note**: As the training data set has imbalanced samples among classes. We have used some techniques to handle this imbalanced dataset, such as balanced weight, focal loss and dropout. See: https://towardsdatascience.com/handling-imbalanced-datasets-in-deep-learning-f48407a0e758
 
-Note: Task 3 refers to the image classification process, Task 1 refers to the image segmentation process
+**Note**: Task 3 refers to the image classification process, Task 1 refers to the image segmentation process
 
 # 2.2 Classification model evaluation: 
 
