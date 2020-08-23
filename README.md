@@ -64,6 +64,8 @@ This solution uses an encoder and a decoder in a U-NET type structure. The encod
 
 Pre-processing for 2590 images takes around 20 minutes:
 
+![The pre-processing of the training data](https://ibb.co/Jrrwc8X)
+
 * Total memory required: 16.9GB
 * Total params:17,937,121
 * Total trainable params: 17,937,121
