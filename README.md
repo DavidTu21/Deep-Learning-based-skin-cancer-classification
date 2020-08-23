@@ -90,6 +90,9 @@ Pre-processing for 2590 images takes around 20 minutes:
 Where denseNet169 is the model backbone’s name, k0 is the 1st folder, v0 is the 1st
 version
 
+![The pre-processing of the training data](https://github.com/DavidTu21/Deep-Learning-based-skin-cancer-classification/blob/master/pic/Picture2.png)
+
+
 **Note**: We are using the k-fold cross validation method. See: https://medium.com/datadriveninvestor/k-fold-cross-validation-6b8518070833 for more detail. Set the variable: num_folds in ‘seg_train.py’ to 5 if you want to do 5 fold training. Set it to 1 if you want to use a single fold.
 
 **Note**: after pre-processing, images data will be saved in data/cache as ‘.npy’
@@ -112,7 +115,7 @@ Change the code ‘k_fold = ’, ‘version = ’ in runs/seg_eval.py to evaluat
 * Eval on the 4th fold: mean jaccard: 0.798, threshold jaccard: 0.749
 * Eval on the 5th fold: mean jaccard: 0.801, threshold jaccard: 0.749
 
-
+![The pre-processing of the training data](https://github.com/DavidTu21/Deep-Learning-based-skin-cancer-classification/blob/master/pic/Picture3.png)
 
 # 1.3	 Segmentation Prediction (pre-request before classification training)
 
@@ -138,6 +141,13 @@ Then multiply the cropped mask with the cropped original image. The main reason 
 
 **Note**:  To visualize the mask or save the mask to a new folder, you have to change few settings, otherwise the cropped and segmented images will be saved instead rather than the pure masks.
 
+![The pre-processing of the training data](https://github.com/DavidTu21/Deep-Learning-based-skin-cancer-classification/blob/master/pic/Picture4.png)
+
+![The pre-processing of the training data](https://github.com/DavidTu21/Deep-Learning-based-skin-cancer-classification/blob/master/pic/Picture5.png)
+
+![The pre-processing of the training data](https://github.com/DavidTu21/Deep-Learning-based-skin-cancer-classification/blob/master/pic/Picture6.png)
+
+
 # 2	Image Classification
 
 # 2.1 Image Classification model train:
@@ -161,6 +171,7 @@ Then multiply the cropped mask with the cropped original image. The main reason 
 * Set the variable: num_folds in ‘cls_train.py’ to 5 if you want to do 5 fold training. Set it to 1 if you want to use a single fold.
 * The training performance of the model after each epoch will be saved in ‘model_data’ directory as a .csv file. The weights will be saved in the same directory too.
 
+![The pre-processing of the training data](https://github.com/DavidTu21/Deep-Learning-based-skin-cancer-classification/blob/master/pic/Picture7.png)
 
 **Note**: As the training data set has imbalanced samples among classes. We have used some techniques to handle this imbalanced dataset, such as balanced weight, focal loss and dropout. See: https://towardsdatascience.com/handling-imbalanced-datasets-in-deep-learning-f48407a0e758
 
@@ -172,6 +183,12 @@ Then multiply the cropped mask with the cropped original image. The main reason 
 
 - Results will be shown in the terminal
 
+![The pre-processing of the training data](https://github.com/DavidTu21/Deep-Learning-based-skin-cancer-classification/blob/master/pic/Picture8.png)
+
+![The pre-processing of the training data](https://github.com/DavidTu21/Deep-Learning-based-skin-cancer-classification/blob/master/pic/Picture9.png)
+
+![The pre-processing of the training data](https://github.com/DavidTu21/Deep-Learning-based-skin-cancer-classification/blob/master/pic/Picture10.png)
+
 # 2.3 Classification model prediction:
 
 - Run **python3 runs/cls_predict.py**
@@ -182,6 +199,8 @@ Then multiply the cropped mask with the cropped original image. The main reason 
 * Set the variable: num_folds in ‘cls_train.py’ to 5 if you want to do 5 fold training. Set it to 1 if you want to use a single fold.
 * Results will appear in the submission folder, it is a .csv file with image ids in the first column and the probability for being each class in the following columns
 * In the cls_predict.py, choose ‘validation’ or ‘test’ in ‘pred_set = ‘ to make prediction on the validation set or the test set.
+
+![The pre-processing of the training data](https://github.com/DavidTu21/Deep-Learning-based-skin-cancer-classification/blob/master/pic/Picture11.png)
 
 # 3	Future work:
 
